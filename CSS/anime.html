@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .contrainer{
+            width: 600px;
+            height: 500px;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .ball{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 50%;
+            animation:bounce 2s ease-in-out infinite;
+        
+        }
+
+        @keyframes bounce {
+            0%{
+                transform: translateY(0);
+            }
+
+            75%{
+                transform: translateY(-200px);
+                background-color: rgb(255, 174, 0);
+            }
+
+            100%{
+                transform: translateY(0);
+            }
+
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contrainer">
+        <div class="ball">
+        </div>
+    </div>
+
+</body>
+</html>

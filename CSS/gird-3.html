@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container {
+        width: 900px;
+        height: 600px;
+        background-color: rgb(0, 0, 0);
+
+        display: grid;
+        grid-template-areas:   "a1 a2 a2 a3 a3"
+        "a1 a4 a5 a5 a6"
+        "a7 a4 a5 a5 a6"
+        "a7 a8 a8 a9 a6";
+        gap: 10px;
+      }
+
+      .a1{
+        background-color: brown;
+        grid-area: a1;
+      }
+
+      .a2{
+        background-color: aqua;
+        grid-area: a2;
+      }
+
+      .a3{
+        background-color: blue;
+        grid-area: a3;
+      }
+
+      .a4{
+        background-color: red;
+        grid-area: a4;
+      }
+
+      .a5{
+        background-color: blueviolet;
+        grid-area: a5;
+      }
+
+      .a6{
+        background-color: rgba(96, 113, 0, 0.686);
+        grid-area: a6;
+      }
+
+      .a7{
+        background-color: rgb(149, 255, 0);
+        grid-area: a7;
+      }
+
+      .a8{
+        background-color: rgb(126, 199, 175);
+        grid-area: a8;
+      }
+
+      .a9{
+        background-color: rgb(240, 117, 10);
+        grid-area: a9;
+      }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="child a1">1st</div>
+      <div class="child a2">2nd</div>
+      <div class="child a3">3rd</div>
+      <div class="child a4">4th</div>
+      <div class="child a5">5th</div>
+      <div class="child a6">6th</div>
+      <div class="child a7">7th</div>
+      <div class="child a8">8th</div>
+      <div class="child a9">9th</div>
+
+      
+    </div>
+</body>
+</html>

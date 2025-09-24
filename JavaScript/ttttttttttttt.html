@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Click to Create Circle</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f4f4f4;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .circle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: #3498db;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none; /* circle itself won't trigger clicks */
+    }
+  </style>
+</head>
+<body>
+<script>
+  document.addEventListener('click', function(e) {
+    const circle = document.createElement('div');
+    circle.classList.add('circle');
+    circle.style.left = e.clientX + 'px';
+    circle.style.top = e.clientY + 'px';
+    document.body.appendChild(circle);
+  });
+</script>
+</body>
+</html>

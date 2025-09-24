@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .circle {
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let btn = document.querySelector("#btn");
+        let container = document.querySelector(".container");
+
+        btn.addEventListener("click", ()=>{
+
+            let shape = document.querySelector("#shape");
+            let shapeInput = shape.value;
+
+            let color = document.querySelector("#color");
+            let colorInput = color.value;
+
+            let quantity = document.querySelector("#quantity");
+            let quantityInput = quantity.value;
+
+            for(let  i=0; i<quantityInput; i++){
+                let shape = document.createElement("div");
+                shape.classList.add(shapeInput);
+                shape.style.backgroundColor = colorInput;
+                container.appendChild(shape);
+            }
+
+            
+        })
+    </script>
+</body>
+</html>
