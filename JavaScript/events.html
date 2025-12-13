@@ -28,28 +28,55 @@
     </style>
 </head>
 <body>
-    <div class ="container">
+     
     <div class="Grandparent">
-
         <div class ="parent">
             <div class ="child"></div>
         </div>
-
-    </div>
-        
-    
     </div>
 
     <script>
     
-        let Grandparent = document.querySelector("Grandparent");
-        let parent = document.querySelector("parent");
-        let child = document.querySelector("child");
+        let Grandparent = document.querySelector(".Grandparent");
+        let parent = document.querySelector(".parent");
+        let child = document.querySelector(".child");
+
+        // addEventListener: Attaches an event handler to an element.
+       // It takes three arguments: the event type, a callback function, and an optional options object or a boolean for `useCapture`.
+
+       // Bubbling
+       // Grandparent.addEventListener("click",() => {
+       //     console.log("grandparent clicked");
+       // });
+
+       // parent.addEventListener("click",() => {
+       //     console.log("parent clicked");
+       // });
+
+       // child.addEventListener("click",() => {
+       //     console.log("child clicked");
+       // });
+
+      // Event Bubbling: The event is first captured and handled by the innermost element and then propagated to outer elements.
+      // This is the default behavior if the third argument is `false` or omitted.   
+      
+      // Trickling
+        Grandparent.addEventListener("click",() => {
+            console.log("grandparent clicked");
+        }, true);
+
+        parent.addEventListener("click",() => {
+            console.log("parent clicked");
+        }, true);
+
+        child.addEventListener("click",() => {
+            console.log("child clicked");
+        }, true);
+
+      // Event Capturing (or Trickling): The event is first captured by the outermost element and propagated to the inner elements.
+      // This happens when the third argument to addEventListener is `true`.
 
     </script>
 </body>
 </html>
 
-//mouse event
-//keyword event
-// input
