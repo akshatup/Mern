@@ -17,13 +17,10 @@
             width: 50px;
             height: 50px;
             background-color: brown;
+           
 
             border-radius: 50%;
-        
-
-  
-            
-        
+    
         }
     </style>
 
@@ -41,18 +38,15 @@
 
 
 
-       // let colors = ["green", "red", "blue"];
-       // let randomIndex = colors[Math.floor(Math.random() * colors.length)];
-       // let circle = document.createElement('div');
-       // circle.style.backgroundColor = colors;
+        //let colors = ["green", "red", "blue"];
+        //let randomIndex = colors[Math.floor(Math.random() * colors.length)];
+        let circle = document.createElement('div');
+        //circle.style.backgroundColor = color;   
         circle.classList.add('circle');
         circle.style.left = event.clientX - 25 + 'px';
         circle.style.top = event.clientY - 25 + 'px';
         container.appendChild(circle);
          });
-
-
-
 
     </script>
 
