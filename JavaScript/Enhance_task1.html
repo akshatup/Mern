@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shape Generator</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      width: 380px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    label {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input,
+    select,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #3730a3;
+    }
+
+    .container {
+      width: 90%;
+      height: 80%;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .square {
+      width: 80px;
+      height: 80px;
+    }
+
+    .rectangle {
+      width: 120px;
+      height: 80px;
+    }
+
+    .circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>Shape Generator</h2>
+
+    <label for="shape">Select Shape</label>
+    <select id="shape">
+      <option value="square">Square</option>
+      <option value="rectangle">Rectangle</option>
+      <option value="circle">Circle</option>
+    </select>
+
+    <label for="color">Select Color</label>
+    <input type="color" id="color" />
+
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" min="1" max="20" />
+
+    <button id="btn">Generate Shapes</button>
+
+    <div class="container"></div>
+  </div>
+
+  <script>
+    const btn = document.querySelector("#btn");
+    const container = document.querySelector(".container");
+
+    btn.addEventListener("click", () => {
+      container.innerHTML = ""; // clear previous shapes
+
+      const shape = document.querySelector("#shape").value;
+      const color = document.querySelector("#color").value;
+      const quantity = document.querySelector("#quantity").value;
+
+      for (let i = 0; i < quantity; i++) {
+        const div = document.createElement("div");
+        div.classList.add(shape);
+        div.style.backgroundColor = color;
+        container.appendChild(div);
+      }
+    });
+  </script>
+</body>
+</html>
